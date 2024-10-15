@@ -97,4 +97,17 @@ class Library():
         self.book.publication_year = publication
         self.book.set_status(True)
 
-       
+        
+class programm:
+    
+    @staticmethod
+    def main():
+        b1 = Book("Тихий Дон", "Шолохов М", 1930, 200, False )
+        b2 = Book("А зори здесь тихие", "Васильев", 1969, 500, False)
+        b3 = Book("Идиот", "Тургенев", 1890, 200, False)
+        r1 = Reader("Кириченко", 19324, b1)
+        l1 = Librarian("Семенова", 12343, r1)
+        bi = Library([b1.autor, b2.autor, b3.autor], r1, l1)
+        print(b1.autor)
+        
+        
