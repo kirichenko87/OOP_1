@@ -69,3 +69,32 @@ class Librarian():
         
     def import_book(self, book):
         self.reader.back_book_library(book)
+        
+
+
+class Library():
+    def __init__(self, 
+                 book:Book, 
+                 reader: Reader, 
+                 librarean: Librarian):
+        
+        self.book = book
+        self.reader = reader
+        self.librarean = librarean
+        
+        
+    def find_book(self, find):
+        result = "Книга не найдена"
+        if self.book.autor == find or self.book.name_book == find:
+            if self.book.status_book == True:
+                result = "Книга успешно найдена"
+        return result
+    
+            
+    def add_new_book(self, title: str, autor: str, publication: int):
+        self.book.name_book = title
+        self.book.autor = autor
+        self.book.publication_year = publication
+        self.book.set_status(True)
+
+       
