@@ -49,3 +49,23 @@ class Reader():
                     result = "Книга успешно возвращена"
         return result           
 
+
+
+class Librarian():
+    def __init__(self, 
+                 name: str, 
+                 id_librian: int, 
+                 list_readers: list[Reader],
+                 ):
+        
+        self.name = name
+        self.id_librian = id_librian
+        self.list_readers = list_readers
+        
+    
+    def export_book(self, book):
+        self.reader.add_book_list_book(book)
+        
+        
+    def import_book(self, book):
+        self.reader.back_book_library(book)
