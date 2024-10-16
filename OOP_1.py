@@ -18,8 +18,8 @@ class Book():
         self.status_book = status
             
 
-    def __str__(self):
-        return(self.name_book, self.autor, self.publication_year)
+    def __repr__(self):
+        return(f"{self.name_book}, {self.autor}, {self.publication_year}")
         
 
         
@@ -89,7 +89,7 @@ class Library():
             if self.book.status_book == True:
                 result = "Книга успешно найдена"
         return result
-    
+
             
     def add_new_book(self, title: str, autor: str, publication: int):
         self.book.name_book = title
@@ -108,6 +108,7 @@ class programm:
         r1 = Reader("Кириченко", 19324, b1)
         l1 = Librarian("Семенова", 12343, r1)
         bi = Library([b1.autor, b2.autor, b3.autor], r1, l1)
-        print(b1.autor)
+        print(b1)
+programm.main()
         
         
